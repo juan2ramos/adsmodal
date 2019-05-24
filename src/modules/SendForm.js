@@ -12,7 +12,12 @@ class SendForm {
   send() {
     this.form.onsubmit = e => {
       e.preventDefault();
-      ajax.get(this.action).then(this.afterSubmit);
+      ajax.get(this.action,{
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+          }
+        }
+        ).then(this.afterSubmit);
     }
   }
 
