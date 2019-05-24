@@ -110,7 +110,7 @@
               "text": "Quiero la asesoría"
             }
           ],
-          "action": "http://localhost:9000/"
+          "action": "http://artico.io/"
         }
       ]
     }
