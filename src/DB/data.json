@@ -1,0 +1,118 @@
+{
+  "type": "form",
+  "rules": {
+    "pages": {
+      "all": true,
+      "pages": []
+    },
+    "user": true
+  },
+  "content": [
+    {
+      "el": "img",
+      "attr": {
+        "src": "https://www.ancla.la/wp-content/uploads/2019/05/imgheader.png",
+        "width": "410",
+        "border": 0
+      },
+      "text": ""
+    },
+    {
+      "el": "#ModalAds-formContent",
+      "content": [
+        {
+          "el": "h2",
+          "attr": {
+            "className": "is-text-center"
+          },
+          "text": "¿Sabes qúe caja fuerte es ideal para tu hogar, negocio u oficina?"
+        },
+        {
+          "el": "p",
+          "attr": {
+            "className": "is-text-center"
+          },
+          "text": "Llena el formulario con tus datos y recibe asesoria personalizada de uno de nuestros asesores"
+        },
+        {
+          "el": "form",
+          "attr": {
+            "className": "Form"
+          },
+          "text": "",
+          "content": [
+            {
+              "el": "input",
+              "attr": {
+                "placeholder": "Nombre",
+                "required": true,
+                "rules": [
+                  "required"
+                ]
+              }
+            },
+            {
+              "el": "input",
+              "attr": {
+                "type": "email",
+                "placeholder": "E-mail",
+                "required": true,
+                "rules": [
+                  "required",
+                  "email"
+                ]
+              }
+            },
+            {
+              "el": "input",
+              "attr": {
+                "placeholder": "Número de contacto",
+                "required": true,
+                "rules": [
+                  "required"
+                ]
+              }
+            },
+            {
+              "el": "div",
+              "attr": {
+                "id": "content"
+              },
+              "content": [
+                {
+                  "el": "input",
+                  "attr": {
+                    "id": "check",
+                    "type": "checkbox",
+                    "placeholder": "check",
+                    "required": true,
+                    "rules": [
+                      "required"
+                    ]
+                  }
+                },
+                {
+                  "el": "label",
+                  "attr": {
+                    "for": "check",
+                    "className": "terms"
+                  },
+                  "text": "Acepto las políticas de privacidad y los términos y condiciones."
+                }
+              ]
+            },
+            {
+              "el": "button",
+              "attr": {
+                "type": "submit",
+                "style": "background: red; color:white"
+              },
+              "text": "Quiero la asesoría"
+            }
+          ],
+          "action": "http://localhost:9000/"
+        }
+      ]
+    }
+  ]
+}

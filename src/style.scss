@@ -1,3 +1,56 @@
-body {
-    background: red;
+
+#ModalAds {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  * {
+    box-sizing: border-box;
+  }
+  img {
+    display: block;
+  }
+  &-formContent {
+    background: white;
+    max-width: 409px;
+    margin: 0 1px;
+    padding: 0 24px 24px;
+    h2 {
+      margin: 0;
+    }
+  }
+
+  .is-text-center{
+    text-align: center;
+  }
+  input{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    &[type="checkbox"]{
+      width: 20px;
+    }
+  }
+  .terms{
+    font-size: 12px;
+  }
+  button{
+    background: #c1282d;
+    color: white;
+    margin: 12px auto;
+    display: block;
+    border: none;
+    padding: 8px 20px;
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
 }
+
