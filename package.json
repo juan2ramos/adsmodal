@@ -1,6 +1,6 @@
 {
   "name": "adsmodal",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "custom ads tool via modal",
   "main": "dist/js/adsmodal.js",
   "scripts": {
