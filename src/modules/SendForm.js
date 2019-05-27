@@ -23,6 +23,7 @@ class SendForm {
 
   afterSubmit(response) {
     document.getElementById('ModalAds').remove();
+    console.log(response)
     swal("Tu mensaje ha sido enviado!", "Gracias por contactarnos!", "success");
   }
 }

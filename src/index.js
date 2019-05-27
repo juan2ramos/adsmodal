@@ -1,12 +1,20 @@
 import './style.scss';
-import Modal from './modules/Modal'
+import data from './modules/Data'
+import Cookies from 'js-cookie'
 
 (function (window, document) {
-  let initLib = function () {
-    new Modal('');
+  let AdsModal = function () {
+    let lib = {
+      setCode: function (code) {
+        this.data = new data(code);
+      }
+    };
+
+    return lib;
+
   };
 
-  if (typeof window.initLib === "undefined") {
-    window.initLib = initLib()
+  if (typeof window.AdsModal === "undefined") {
+    window.AdsModal = AdsModal()
   }
 })(window, document);

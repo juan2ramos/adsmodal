@@ -4,6 +4,7 @@ import Elemets from "./Elemets";
 class Render {
 
   constructor(content) {
+
     this.render(content)
   }
 
@@ -15,6 +16,7 @@ class Render {
 
   elements(content) {
     const elements = [];
+
     for (const key in content) {
       elements.push(new Elemets(content[key]));
     }
