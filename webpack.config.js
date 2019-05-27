@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
+const CompressionPlugin = require('compression-webpack-plugin');
 
 const config = {
   mode: 'development',
@@ -49,7 +49,20 @@ const config = {
   devServer: {
     contentBase: path.join(__dirname),
     port: 9000
-  }
+  },
+  plugins: [],
 };
 
+if (process.env.NODE_ENV === 'production') {
+  config.plugins.push(
+    new ExtractTextPlugin('/adsmodal.min.js'),
+    new CompressionPlugin({
+      asset: "[path].gz[query]",
+      algorithm: "gzip",
+      test: /\.js$/,
+      threshold: 10240,
+      minRatio: 0.8
+    })
+  );
+}
 module.exports = config;
