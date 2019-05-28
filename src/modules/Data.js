@@ -56,7 +56,7 @@ class Data {
 
   getURLApi() {
     return process.env.NODE_ENV === 'development' ? "http://adsmodal-back.jk/api/get-info-initial" :
-      "https://api/artico.io/api/get-info-initial"
+      "https://api.artico.io/api/get-info-initial"
   }
 
 
