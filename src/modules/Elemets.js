@@ -1,5 +1,6 @@
 import {el} from 'redom';
 import SendForm from "./SendForm";
+import ElEvent from "./ElEvent";
 
 class Elemets {
   constructor(element) {
@@ -12,8 +13,12 @@ class Elemets {
       }
       return
     }
+
     this.el = el(element.el, element.attr, element.text);
 
+    if (element.event) {
+      new ElEvent(this.el,element.event,element.callback);
+    }
   }
 
   elements(content) {

@@ -13,6 +13,9 @@
   * {
     box-sizing: border-box;
   }
+  &-content {
+    position: relative;
+  }
   img {
     display: block;
   }
@@ -22,25 +25,26 @@
     margin: 0 1px;
     padding: 0 24px 24px;
     h2 {
-      margin: 0;
+      margin: 0 0 5px;
+      font-size: 22px;
     }
   }
 
-  .is-text-center{
+  .is-text-center {
     text-align: center;
   }
-  input{
+  input {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
-    &[type="checkbox"]{
+    &[type="checkbox"] {
       width: 20px;
     }
   }
-  .terms{
-    font-size: 12px;
+  .terms {
+    font-size: 11px;
   }
-  button{
+  button {
     background: #c1282d;
     color: white;
     margin: 12px auto;
@@ -51,6 +55,12 @@
     border-radius: 4px;
     cursor: pointer;
   }
-
+  &Close {
+    color: white;
+    position: absolute;
+    font-size: 20px;
+    right: 0;
+    cursor: pointer;
+  }
 }
 

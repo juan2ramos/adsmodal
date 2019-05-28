@@ -10,7 +10,7 @@ class Render {
 
   render(content) {
     const elements = this.elements(content);
-    const contentModal = el('#ModalAds', el('.ModalAds-content',elements));
+    const contentModal = el('#ModalAds', el('#ModalAds-content',elements));
     mount(document.body, contentModal);
   }
 
