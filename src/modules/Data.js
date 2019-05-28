@@ -4,8 +4,9 @@ import Modal from "./Modal";
 
 class Data {
 
-  constructor(code) {
+  constructor(code, gaClientId) {
     this.code = code;
+    this.gaClientId = gaClientId;
     this.url = this.getURLApi();
     this.send()
   }
@@ -13,7 +14,7 @@ class Data {
   send(action = 'pageview') {
     const cookie = Cookies.get('_aa') ? Cookies.get('_aa') : '';
 
-    ajax.post(this.url, {'code': this.code, cookie, 'referrer': document.referrer, action})
+    ajax.post(this.url, {'code': this.code, cookie, 'referrer': document.referrer, action, 'gacid': this.gaClientId })
       .then(this.generateData.bind(this))
   }
 
