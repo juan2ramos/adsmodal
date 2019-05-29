@@ -12,6 +12,7 @@ class SendForm {
   send() {
     this.form.onsubmit = e => {
       e.preventDefault();
+      document.querySelector('#ModalAds button').setAttribute('disabled', 'disabled');
       ajax.post(this.action, this.inputs()).then(this.afterSubmit);
     }
   }

@@ -54,6 +54,10 @@
     font-size: 20px;
     border-radius: 4px;
     cursor: pointer;
+    &:disabled {
+      background: graytext !important;
+      cursor: not-allowed;
+    }
   }
   &Close {
     color: white;
