@@ -12,13 +12,23 @@ class SendForm {
   send() {
     this.form.onsubmit = e => {
       e.preventDefault();
-      ajax.get(this.action,{
-          headers: {
-            'Access-Control-Allow-Origin': '*',
-          }
-        }
-        ).then(this.afterSubmit);
+      ajax.post(this.action, this.inputs()).then(this.afterSubmit);
     }
+  }
+
+  inputs() {
+    const Modal = document.querySelector('#ModalAds');
+    const inputs = Modal.querySelectorAll('input, select, textarea');
+    const obj= {};
+    for( let i = 0; i < inputs.length; ++i ) {
+      const element = inputs[i];
+      const name = element.name;
+
+      if( name ) {
+        obj[ name ] = element.value;
+      }
+    }
+    return obj;
   }
 
   afterSubmit(response) {

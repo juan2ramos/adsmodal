@@ -14,7 +14,7 @@ class Data {
   send(action = 'pageview') {
     const cookie = Cookies.get('_aa') ? Cookies.get('_aa') : '';
 
-    ajax.post(this.url, {'code': this.code, cookie, 'referrer': document.referrer, action, 'gacid': this.gaClientId })
+    ajax.post(this.url, {'code': this.code, cookie, 'referrer': document.referrer, action, 'gacid': this.gaClientId})
       .then(this.generateData.bind(this))
   }
 
@@ -23,11 +23,12 @@ class Data {
     if (!Cookies.get('_aa')) {
       Cookies.set('_aa', response.data.cookie);
     }
-
+    const timeDelay = response.data.time ? response.data.time : 0;
     if (this.validate(response.data.rules)) {
-      new Modal(response.data.content);
+      setTimeout(function () {
+        new Modal(response.data.content);
+      }, timeDelay);
     }
-
   }
 
   validate(rules) {
